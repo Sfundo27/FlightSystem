@@ -1,0 +1,82 @@
+﻿@model FlightSystem.Models.FlightBooking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FlightBooking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.flight.Origin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.flight.Origin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlightClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlightClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TripType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TripType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfPassenger)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfPassenger)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBooking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBooking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BookingId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

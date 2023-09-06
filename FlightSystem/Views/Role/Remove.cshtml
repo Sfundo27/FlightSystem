@@ -1,0 +1,29 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+@{
+    ViewBag.Title = "Remove";
+}
+
+<h2>Remove</h2>
+
+<dl class="form-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.Id)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Id)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Name)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+</dl>
+@using (Html.BeginForm())
+{
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-primary" />
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+}
+

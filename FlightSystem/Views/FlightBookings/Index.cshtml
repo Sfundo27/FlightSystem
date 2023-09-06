@@ -1,0 +1,70 @@
+﻿@model IEnumerable<FlightSystem.Models.FlightBooking>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.flight.FlightId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FlightClass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TripType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfPassenger)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBooking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalCost)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.flight.FlightId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.user.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlightClass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TripType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfPassenger)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBooking)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalCost)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id=item.BookingId })
+        </td>
+    </tr>
+}
+
+</table>
